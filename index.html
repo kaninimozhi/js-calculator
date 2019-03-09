@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Calculator</title>
+</head>
+
+<body>
+    <p> Enter number 1</p>
+    <input type="text" id="num1" value=0>
+
+    <p> Enter number 2</p>
+    <input type="text" id="num2" value=0>
+    <br> <br>
+    <button onclick="calc()"> Submit </button>
+
+   <p> Addition: </p> <p id='add'> </p>
+   <p> Subtraction: </p> <p id='sub'> </p>
+   <p> Multiplication: </p> <p id='mul'> </p>
+   <p> Division: </p> <p id='div'> </p>
+
+   <p> modulus: </p> <p id='mod'> </p>
+   <p> Exponent: </p> <p id='exp'> </p>
+
+   <p> Post inc: </p> <p id='post_inc'> </p>
+   <p> Post dec: </p> <p id='post_dec'> </p>
+
+   <p> Pre Inc: </p> <p id='pre_inc'> </p>
+   <p> Pre Dec: </p> <p id='pre_dec'> </p>
+
+    <script>
+        function calc(){
+            var x = Number (document.getElementById('num1').value);
+            var y = Number (document.getElementById('num2').value);
+
+            document.getElementById('add').innerHTML = x + y; //concatenation
+            document.getElementById('sub').innerHTML = x - y;
+            document.getElementById('mul').innerHTML = x * y;
+            document.getElementById('div').innerHTML = x / y;
+
+            document.getElementById('mod').innerHTML = x % y;
+            document.getElementById('exp').innerHTML = x ** y;
+
+            document.getElementById('post_inc').innerHTML = x ++ ;
+            document.getElementById('post_dec').innerHTML = y --;
+
+            document.getElementById('pre_inc').innerHTML = ++x;
+            document.getElementById('pre_dec').innerHTML = --y;
+        }
+    </script>
+</body>
+
+</html>
